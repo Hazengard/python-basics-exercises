@@ -1,0 +1,17 @@
+# Challenge: Track Your Investments (pg. 161)
+
+def invest(amount, rate, years):
+    n = 1
+    while n <= years:
+        amount = amount * (1 + (rate / 100))
+        if n <= years:
+            v = amount
+            print('Year',n,':',round(v, 2))
+        n = n + 1
+    return v
+
+amount = float(input('Enter the investment:'))
+years = int(input('Enter the number of years:'))
+rate = float(input('Enter the rate:'))
+
+invest(amount, rate, years)
